@@ -1,6 +1,5 @@
 import requests
 
-# 1. Тестуємо створення клієнта
 print("Створюємо клієнта...")
 client_response = requests.post(
     'http://127.0.0.1:5000/client', 
@@ -8,7 +7,6 @@ client_response = requests.post(
 )
 print(client_response.json())
 
-# 2. Тестуємо створення товару
 print("\nСтворюємо товар...")
 product_response = requests.post(
     'http://127.0.0.1:5000/product', 
@@ -16,9 +14,7 @@ product_response = requests.post(
 )
 print(product_response.json())
 
-# 3. Тестуємо створення замовлення
 print("\nСтворюємо замовлення...")
-# Ми кажемо: Клієнт №1 (ТОВ Київський Завод) купує Товар №1 (Пляшка 1Л) два рази
 order_response = requests.post(
     'http://127.0.0.1:5000/order', 
     json={
